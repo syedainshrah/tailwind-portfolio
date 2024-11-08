@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // Import Image component
-import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa'; // Add your social media icons
 
 const Contact = () => {
   return (
-    <section className="p-10 bg-gray-400">
+    <section className="p-10 bg-gray-40">
       <h1 className="text-4xl font-bold mb-8 text-center">Contact Me</h1>
       <div className="flex justify-center">
         <div className="bg-gradient-to-r from-gray-800 to-gray-600 text-white shadow-lg rounded-lg p-6 w-full max-w-md transition-transform transform hover:scale-105 hover:shadow-xl">
@@ -23,38 +23,17 @@ const Contact = () => {
           </div>
           <div className="mb-4">
             <h3 className="font-semibold">Social Media:</h3>
-            <p className="flex items-center">
-              <Link href="#" className="text-blue-300 hover:underline flex items-center mr-4">
-                <Image 
-                  src="/linkedin.jpeg" // LinkedIn image path
-                  alt="LinkedIn"
-                  width={24} // Adjust width as needed
-                  height={24} // Adjust height as needed
-                  className="mr-1" // Optional styling
-                />
-                LinkedIn
+            <div className="flex items-center">
+              <Link href="https://www.linkedin.com/in/your-profile" className="text-blue-300 hover:underline flex items-center mr-4">
+                <FaLinkedin className="mr-2" size={24} /> LinkedIn
               </Link>
-              <Link href="#" className="text-blue-300 hover:underline flex items-center mr-4">
-                <Image 
-                  src="/github.jpeg" // GitHub image path
-                  alt="GitHub"
-                  width={24} // Adjust width as needed
-                  height={24} // Adjust height as needed
-                  className="mr-1" // Optional styling
-                />
-                GitHub
+              <Link href="https://github.com/your-profile" className="text-blue-300 hover:underline flex items-center mr-4">
+                <FaGithub className="mr-2" size={24} /> GitHub
               </Link>
-              <Link href="#" className="text-blue-300 hover:underline flex items-center">
-                <Image 
-                  src="/insta.jpeg" // Instagram image path
-                  alt="Instagram"
-                  width={24} // Adjust width as needed
-                  height={24} // Adjust height as needed
-                  className="mr-1" // Optional styling
-                />
-                Insta
+              <Link href="https://www.instagram.com/your-profile" className="text-blue-300 hover:underline flex items-center">
+                <FaInstagram className="mr-2" size={24} /> Instagram
               </Link>
-            </p>
+            </div>
           </div>
         </div>
       </div>
